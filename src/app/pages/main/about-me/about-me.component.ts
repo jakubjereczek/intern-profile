@@ -25,8 +25,8 @@ export class AboutMeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.changeLetters();
-    this.changeCursorVisibility();
+    // this.changeLetters();
+    // this.changeCursorVisibility();
   }
 
   changeLetters() {

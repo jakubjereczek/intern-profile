@@ -1,4 +1,4 @@
-@import "../shared/variables.scss";
+
 
 ul {
     display: flex;
@@ -16,6 +16,8 @@ span.link {
     transition: transform .6s;
     &.activate {
         color: $primary-color;
+        font-weight: 500;
+
     }
     &:hover {
         color: $primary-color;

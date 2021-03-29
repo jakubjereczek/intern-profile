@@ -1,0 +1,14 @@
+<div id="single-section-page">
+    <p class="section-title"><span>#projects</span></p>
+    <div id="header"></div>
+    <div id="section-content">
+        <div class="project-container" *ngFor="let project of projects">
+            <div class="project-content" [ngStyle]="{'background-image': 'url(' + project.image + ')'}">
+                <h2 class="project-title">{{project.name}}</h2>
+                <div class="project-shadow-effect">
+                    <div class="link"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

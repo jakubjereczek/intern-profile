@@ -12,6 +12,7 @@ html {
         font-size: 14px;
     }
     overflow-x: hidden;
+    min-width: 200px;
 }
 
 #header {
@@ -50,7 +51,8 @@ html {
     font-size: 1.1rem;
     color: $secondary-color;
     margin: 0px 5px;
-    
+    z-index: 3;
+
     & > span {
         color: $primary-color;
     }
