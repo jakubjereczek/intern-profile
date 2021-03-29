@@ -1,0 +1,7 @@
+#single-section-page {
+    height: 100vh;
+
+    & > #section-content {
+        margin: 10px;
+    }
+}

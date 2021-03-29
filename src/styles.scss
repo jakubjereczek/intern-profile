@@ -6,12 +6,15 @@
     padding: 0;
 }
 
-body {
+html {
+    font-size: 16px;
+    @media (max-width: 768px) {
+        font-size: 14px;
+    }
     overflow-x: hidden;
 }
 
-
-.box {
+#header {
     position: relative;
     top: -50px;
     left: -5%;
@@ -40,4 +43,16 @@ body {
     }
 }
 
+.section-title {
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+    color: $secondary-color;
+    margin: 0px 5px;
+    
+    & > span {
+        color: $primary-color;
+    }
+}
 

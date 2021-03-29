@@ -6,19 +6,20 @@ ul {
 }
 
 .desktop-menu li {
-    width: 15%;
+    width: 12%;
     min-width: 100px;
     text-align: center;
 }
 
 span.link {
+    font-size: 1.1rem;
     transition: transform .6s;
     &.activate {
         color: $primary-color;
     }
     &:hover {
         color: $primary-color;
-        font-size: 1.03em;
+        font-size: 1.15em;
         cursor: pointer;
     }
 }
@@ -32,6 +33,7 @@ span.link {
       visibility: visible;
       color: $primary-color;
       padding: 10px;
+      font-size: 1.2rem;
   }
   ul.desktop-menu {
     visibility: hidden;
