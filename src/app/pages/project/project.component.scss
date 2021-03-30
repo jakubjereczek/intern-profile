@@ -36,7 +36,7 @@
     height: 80%;
     @media (max-width: 768px) {
         width: 100%;
-        height: 100%;
+        height: 90%;
     }
 
     & > #project-container {
@@ -60,7 +60,7 @@
     overflow-y: scroll;
 
     @media (max-width: 768px) {
-        width: 45%;
+        width: 40%;
     }
     
     &::-webkit-scrollbar {
@@ -76,8 +76,12 @@
         justify-content: space-around;
 
         & > img {
+            box-sizing: border-box;
             width: 45%;
             height: 45%;
+            margin: 5px;
+            cursor: pointer;
+            @include bg-shadow;
             @media (max-width: 768px) {
                 width: 100%;
                 height: 100%;
@@ -89,9 +93,78 @@
 
 
 button {
+    position: absolute;
+    top: -32px;
+    right: 0px;
+    width: 46px;
+    height: 46px;
     background-color: $secondary-color;
-    color: #000;
-    border: 1px solid #000;
-    width: 200px;
+    border: 2px solid #000;
+    border-radius: 50%;
     padding: 10px 5px;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: calc(50% - 9px);
+        background-color: #000;
+        width: 18px;
+        height: 2px;
+        transform: rotate(45deg);
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: calc(50% - 9px);
+        background-color: #000;
+        width: 18px;
+        height: 2px;
+        transform: rotate(-45deg);
+    }
+
+    transition: 0.6s;
+    &:hover {
+        transform: scale(1.03) rotate(45deg);
+    }
 }
+
+#project-content-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+#project-content {
+    min-height: 100px;
+
+    height: 100%;
+
+    margin-left: calc(35% + 30px);
+    @media (max-width: 768px) {
+        margin-left: calc(45% + 15px);
+    }
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    & > .project-content-title {
+        font-size: 2.4rem;
+    }
+
+}
+
+
+.project-content-title, .project-content-description, .project-content-technologies {
+    width: 100%;
+    margin-top: 10px;
+
+    & > span {
+        color: $primary-color;
+        font-weight: bold;
+    }
+}
+
+

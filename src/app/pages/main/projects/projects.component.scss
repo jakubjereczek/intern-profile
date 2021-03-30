@@ -109,8 +109,9 @@ h2 {
     right: -10px;
     padding: 10px 0px;
     padding-left: 25px;
-    width: 200px;
+    min-width: 200px;
     height: 100px;
+    width: 40%;
 
     background-color: $primary-color;
     color: $secondary-color;
@@ -154,7 +155,7 @@ h2 {
     transform: translateX(0);
 }
 .message-alert.disable {
-    transform: translateX(500px);
+    transform: translateX(100%);
 }
 
 .github-links {

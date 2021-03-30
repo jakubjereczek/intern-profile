@@ -6,8 +6,8 @@ export const PROJECTS: Project[] = [
         name: "Day planner",
         image: '/assets/images/projects/dayplanner.png',
         images: [{ link: '/assets/images/projects/dayplanner.png', caption: "Img 1" }, { link: '/assets/images/projects/dayplanner.png', caption: "Img 1" }],
-        description: "",
-        technologies: [""]
+        description: "Aplikacja frontendowa korzystajaca z API Firebase Google autoryzacji. Dane zapisywane są w localStorage i ładowane za pomocą Reduxa. W czasie budowania tego projektu chciałem skupić się na frontendowym aspekcie budowania aplikacji internetowych. Aplikacja zaimplementowana ma wszystkie widoki związane z autoryzacja (logowanie, przypomnij hasło, rejestracja, zmień dane). Aplikacja pozwala na zapisywanie dniowych 24-godzinnych celów – po ukływie tego czasu zmieniają one kolor w aplikacji oraz są przeniesione do sekcji wygaśnietych. Aplikacja umożliwia wyświetlenie pojedyńczego zadania oraz usunięcie go. ",
+        technologies: ["JavaScript", "HTML", "CSS"]
     },
     {
         id: 2,

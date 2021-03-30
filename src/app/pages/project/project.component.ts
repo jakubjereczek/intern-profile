@@ -57,6 +57,10 @@ export class ProjectComponent implements OnInit {
 
   open(index: number): void {
     // open lightbox
+    console.log("open!!!!!!!!!")
+    console.log("open!!!!!!!!!")
+    console.log("open!!!!!!!!!")
+
     this._lightbox.open(this._album, index);
   }
 

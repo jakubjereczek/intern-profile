@@ -3,11 +3,23 @@
     <div id="section-content">
         <div id="project-container-bg">
             <div id="project-container">
+                <button (click)="back()"></button>
+
                 <div id="project-images">
                     <div class="project-images-content">
                         <img *ngFor="let image of _album; let i=index" [src]="image.thumb" (click)="open(i)" />
                     </div>
                 </div>
+                <div id="project-content-container">
+                    <div id="project-content" *ngIf="projectDetails | async as project">
+                        <h2 class="project-content-title">{{project.name}}</h2>
+                        <p class="project-content-description">{{project.description}}</p>
+                        <p class="project-content-technologies">Zastosowane technologie:
+                            <span>{{project.technologies.join(", ")}}</span>
+                        </p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>
