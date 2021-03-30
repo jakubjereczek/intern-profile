@@ -15,4 +15,19 @@
             </div>
         </div>
     </div>
+    <h2 class="title">Lista wszystkich projektów na moim Githubie posortowanych względem dat utworzenia projektu: </h2>
+    <div class="github-links">
+        <div class="github-repo" *ngFor="let repo of githubRepos$ | async">
+            <div class="github-repo-icon">
+            </div>
+            <div class="github-repo-content" (click)="moveToGithubProject(repo)">
+                <div class="github-repo-content-title">
+                    <span class="repo-title">{{repo.name}}
+                    </span><span class="repo-date">({{repo.created_at | date: 'mediumDate'}})</span>
+                </div>
+                <div class="github-repo-content-subtitle"> {{repo.description}}
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

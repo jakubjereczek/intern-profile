@@ -1,7 +1,11 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { PROJECTS } from 'src/app/models/data-base';
 import { Project } from 'src/app/models/project';
+import { Repo } from 'src/app/models/repo';
+import { GithubHttpService } from 'src/app/services/github-http.service';
 
 @Component({
   selector: 'app-projects',
@@ -11,13 +15,14 @@ import { Project } from 'src/app/models/project';
 export class ProjectsComponent implements OnInit {
 
   projects: Project[] = PROJECTS;
+  githubRepos$: Observable<Repo[]>;
 
   isMessageAlertVisible = false;
 
   @ViewChild('projectsSection')
   projectsSection!: ElementRef;
 
-  constructor(router: Router) {
+  constructor(router: Router, private githubHttp: GithubHttpService) {
     // Wykorzystane w przypadku wyjścia z widoku projektu. 
     // Wrocimy do sekcji #projects.
     router.events.subscribe(s => {
@@ -35,6 +40,7 @@ export class ProjectsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.getRepos();
   }
 
   @HostListener('window:scroll', ['$event'])
@@ -46,6 +52,18 @@ export class ProjectsComponent implements OnInit {
       return this.isMessageAlertVisible = true;
     }
     return this.isMessageAlertVisible = false;
+  }
+
+  getRepos() {
+    this.githubRepos$ = this.githubHttp.getRepos().pipe(
+      map(results => results.sort((a, b) => {
+        return a.created_at > b.created_at ? 1 : a.created_at === b.created_at ? 0 : -1;
+      }))
+    );
+  }
+
+  moveToGithubProject(repo: Repo) {
+    window.location.href = repo.html_url;
   }
 
 
