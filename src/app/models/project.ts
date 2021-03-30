@@ -5,4 +5,6 @@ export interface Project {
     images: Array<any>,
     description: string,
     technologies: string[],
+    demo: string | null,
+    github: string | null,
 }

@@ -1,6 +1,7 @@
 @import "../../../shared/variables.scss";
 
 #single-section-page {
+    position: relative;
     height: auto;
     min-height: 100vh;
     display: flex;
@@ -20,6 +21,8 @@
     & > div:nth-child(2) {
         flex-basis: 75%;
     }
+    z-index: 1;
+
 }
 
 .h2-title {
@@ -40,4 +43,27 @@
     font-size: 1.7rem;
     margin: 10px;
     text-align: justify;
+}
+
+
+.background_photo2 {
+    position: absolute;
+    left: -9%;
+    top: calc(50% - 200px);
+    max-width: 400px;
+    max-height: 400px;
+    min-width: 100px;
+    min-height: 100px;
+    width: 45%;
+    height: 45%;
+    background-image: url("/assets/images/background_photo2.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 0;
+
+    @media (max-width: 768px) {
+        left: 0%;
+        top: 0%;
+    }
+
 }

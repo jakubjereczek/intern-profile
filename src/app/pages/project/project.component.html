@@ -1,22 +1,27 @@
 <div id="single-section-page">
-    <!-- <button (click)="back()">Wróć</button> -->
     <div id="section-content">
         <div id="project-container-bg">
-            <div id="project-container">
+            <div id="project-container" *ngIf="projectDetails | async as project">
                 <button (click)="back()"></button>
-
+                <div class="links buttons">
+                    <ng-container *ngIf="project.github">
+                        <div class="github btn" (click)="moveToProject(project, 'github')"></div>
+                    </ng-container>
+                    <ng-container *ngIf="project.demo">
+                        <div class="demo btn" (click)="moveToProject(project, 'demo')"></div>
+                    </ng-container>
+                </div>
                 <div id="project-images">
                     <div class="project-images-content">
                         <img *ngFor="let image of _album; let i=index" [src]="image.thumb" (click)="open(i)" />
                     </div>
                 </div>
                 <div id="project-content-container">
-                    <div id="project-content" *ngIf="projectDetails | async as project">
+                    <div id="project-content">
                         <h2 class="project-content-title">{{project.name}}</h2>
-                        <p class="project-content-description">{{project.description}}</p>
                         <p class="project-content-technologies">Zastosowane technologie:
-                            <span>{{project.technologies.join(", ")}}</span>
-                        </p>
+                            <span>{{project.technologies.join(", ")}}</span></p>
+                        <p class="project-content-description">{{project.description}}</p>
                     </div>
                 </div>
 
