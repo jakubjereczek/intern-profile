@@ -14,6 +14,9 @@ import { ProjectComponent } from './pages/project/project.component';
 import localePl from "@angular/common/locales/pl";
 import { registerLocaleData } from '@angular/common';
 
+import { LightboxModule } from 'ngx-lightbox';
+
+
 registerLocaleData(localePl);
 
 @NgModule({
@@ -29,7 +32,8 @@ registerLocaleData(localePl);
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    LightboxModule
   ],
   providers: [{ provide: LOCALE_ID, useValue: "pl-PL" }],
   bootstrap: [AppComponent]

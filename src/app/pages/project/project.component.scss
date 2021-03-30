@@ -1,14 +1,92 @@
 @import "../../shared/variables.scss";
+@import "../../shared/mixins.scss";
 
 #single-section-page {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100vw;
+    height: 100vh;
 
     & > #section-content {
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $secondary-color;
+        width: 70%;
+        height: 75%;
+        border-radius: 20px;
+        padding: 20px;
+
+        @media (max-width: 768px) {
+            width: 95%;
+            height: 100%;
+        }
 
     }
 }
+
+#project-container-bg {
+    position: relative;
+    background-color: $primary-color;
+
+    width: 80%;
+    height: 80%;
+    @media (max-width: 768px) {
+        width: 100%;
+        height: 100%;
+    }
+
+    & > #project-container {
+        position: relative;
+        background-color: $secondary-color;
+        top: -10px;
+        left: -10px;
+        width: 100%;
+        height: 100%;
+        @include bg-shadow;
+    }
+}
+
+#project-images {
+    position: absolute;
+    top: -200px;
+    left: 20px;
+    width: 35%;
+    height: calc(100% + 200px);
+    background-color: $primary-color;
+    overflow-y: scroll;
+
+    @media (max-width: 768px) {
+        width: 45%;
+    }
+    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    & > .project-images-content {
+        margin-top: 200px;
+        padding: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        & > img {
+            width: 45%;
+            height: 45%;
+            @media (max-width: 768px) {
+                width: 100%;
+                height: 100%;
+            }
+        
+        }
+    }
+}
+
 
 button {
     background-color: $secondary-color;

@@ -1,6 +1,14 @@
 <div id="single-section-page">
-    <button (click)="back()">Wróć</button>
+    <!-- <button (click)="back()">Wróć</button> -->
     <div id="section-content">
-
+        <div id="project-container-bg">
+            <div id="project-container">
+                <div id="project-images">
+                    <div class="project-images-content">
+                        <img *ngFor="let image of _album; let i=index" [src]="image.thumb" (click)="open(i)" />
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
