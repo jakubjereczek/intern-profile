@@ -1,3 +1,5 @@
+@import "../../../shared/mixins.scss";
+
 #single-section-page {
     height: calc(100vh - 150px);
     display: flex;
@@ -40,8 +42,8 @@ p {
 .image-profile-container {
     display: inline-block;
     box-sizing: border-box;
-    width: 100px;
-    height: 100px;
+    width: 126px;
+    height: 126px;
     border-radius: 50%;
     background-color: #fff;
     padding: 5px;
@@ -53,4 +55,6 @@ p {
         height: 100%;
         border-radius: 50%;
     }
+
+    @include bg-shadow;
 }

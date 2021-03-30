@@ -1,0 +1,43 @@
+@import "../../../shared/variables.scss";
+
+#single-section-page {
+    height: auto;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#section-content {
+    display: flex;
+    padding: 20px;
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+    & > div:nth-child(1) {
+        flex-basis: 25%;
+    }
+    & > div:nth-child(2) {
+        flex-basis: 75%;
+    }
+}
+
+.h2-title {
+    font-size: 3rem;
+    color: $secondary-color;
+    margin: 10px;
+    text-align: center;
+    font-weight: 300;
+    @media (max-width: 768px) {
+        text-align: left;
+    }
+    & > span {
+        font-weight: bold;
+    }
+}
+
+.p-describe {
+    font-size: 1.7rem;
+    margin: 10px;
+    text-align: justify;
+}

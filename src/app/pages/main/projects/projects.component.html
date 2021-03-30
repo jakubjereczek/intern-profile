@@ -1,12 +1,16 @@
 <div id="single-section-page">
-    <p class="section-title"><span>#projects</span></p>
+    <p class="section-title" id="projects" #projectsSection><span>#projects</span></p>
     <div id="header"></div>
     <div id="section-content">
+        <div class="message-alert" #messageAlert [ngClass]="isMessageAlertVisible ? 'enable' : 'disable'">
+            <p>Najedz na miniaturę projektu aby przejść do szczegółowego okna projektu!</p>
+        </div>
+
         <div class="project-container" *ngFor="let project of projects">
             <div class="project-content" [ngStyle]="{'background-image': 'url(' + project.image + ')'}">
                 <h2 class="project-title">{{project.name}}</h2>
                 <div class="project-shadow-effect">
-                    <div class="link"></div>
+                    <div class="link" [routerLink]="['/project', project.id]"></div>
                 </div>
             </div>
         </div>

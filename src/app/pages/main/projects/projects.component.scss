@@ -1,11 +1,15 @@
 @import "../../../shared/variables.scss";
+@import "../../../shared/mixins.scss";
 
 #single-section-page {
     background-color: #fff;
-    width: auto;
+    height: auto;
+    padding-bottom: 20px;
 }
 
 #section-content {
+    position: relative;
+
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -41,6 +45,7 @@
             top: 8px;
             left: 8px;
         }
+        @include bg-shadow;
     }
 }
 
@@ -56,7 +61,6 @@
         text-shadow: -2px 0 #fff, 0 2px #fff, 2px 0 #fff, 0 -2px #fff;
         font-weight: bold;
 
-
         z-index: 1;
     }
     & > .project-shadow-effect {
@@ -64,11 +68,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        top: 70%;
+        top: 80%;
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(180deg, transparent 5%, rgba(255,250,235,0.45) 25%, rgba(255,255,255,0.85) 100%);
+        background: linear-gradient(180deg, transparent 5%, rgba(255,250,255,0.75) 25%, rgba(255,255,255,0.85) 100%);
         transition: 1.2s;
 
         & > .link {
@@ -87,4 +91,68 @@
         left: 0;
         top: 0;
     }
+}
+
+h2 {
+    margin: 10px;
+    color: $primary-color;
+    text-align: center;
+    width: 50%;
+    font-weight: 100;
+}
+
+.message-alert {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: -150px;
+    right: -10px;
+    padding: 10px 0px;
+    padding-left: 25px;
+    width: 200px;
+    height: 100px;
+
+    background-color: $primary-color;
+    color: $secondary-color;
+    z-index: 3;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: -50px;
+        top: 0;
+        display: block;
+        width: 100px;
+        height: 120px;
+        border-radius: 50%;
+        background-color: $primary-color;
+        z-index: -1;
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        left: -36px;
+        top: calc(50 - 18)px;
+        display: block;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background-color: $secondary-color;
+        z-index: 0;
+        background-image: url("/assets/images/link.png");
+        background-size: contain;
+        border: 4px solid $secondary-color;
+        @include bg-shadow;
+
+    }
+    transition: 1.2s;
+
+}
+
+.message-alert.enable {
+    transform: translateX(0);
+}
+.message-alert.disable {
+    transform: translateX(500px);
 }

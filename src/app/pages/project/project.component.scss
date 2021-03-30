@@ -1,0 +1,19 @@
+@import "../../shared/variables.scss";
+
+#single-section-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > #section-content {
+
+    }
+}
+
+button {
+    background-color: $secondary-color;
+    color: #000;
+    border: 1px solid #000;
+    width: 200px;
+    padding: 10px 5px;
+}

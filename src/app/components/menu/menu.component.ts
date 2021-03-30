@@ -18,4 +18,8 @@ export class MenuComponent implements OnInit {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
+  scrollIntoView(elem: string) {
+    document.querySelector(elem)!.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
 }
