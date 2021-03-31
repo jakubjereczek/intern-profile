@@ -14,7 +14,8 @@ export class GithubHttpService {
   constructor(private http: HttpClient) { }
 
   getRepos(): Observable<Repo[]> {
-    return this.http.get<Repo[]>(this.URL).pipe(tap(console.log));
+    console.log("Repos")
+    return this.http.get<Repo[]>(this.URL);
 
   }
 }

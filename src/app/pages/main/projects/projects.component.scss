@@ -40,7 +40,7 @@
             width: 100%;
             height: 100%;
             background-color: #fff;
-            background-image: url("/assets/images/projects/snake.png");
+            background-image: url("../../../../assets/images/projects/snake.png");
             background-size: cover;
             border-radius: 10px;
             top: 8px;
@@ -79,7 +79,7 @@
         & > .link {
             width: 46px;
             height: 46px;
-            background-image: url("/assets/images/link.png");
+            background-image: url("../../../../assets/images/link.png");
             background-size: cover;
             transition: 0.6s;
             &:hover {
@@ -151,7 +151,7 @@ h2 {
         border-radius: 50%;
         background-color: $secondary-color;
         z-index: 0;
-        background-image: url("/assets/images/link.png");
+        background-image: url("../../../../assets/images/link.png");
         background-size: contain;
         border: 4px solid $secondary-color;
         @include bg-shadow;
@@ -195,7 +195,7 @@ h2 {
             left: 10px;
             width: 28px;
             height: 28px;  
-            background-image: url("/assets/images/github.png");
+            background-image: url("../../../../assets/images/github.png");
             background-size: contain;
         }
 
