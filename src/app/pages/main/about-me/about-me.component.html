@@ -3,11 +3,11 @@
     <div id="section-content">
         <div>
             <div class="image-profile-container">
-                <div class="image-profile"></div>
+                <div class="image-profile" [ngStyle]="{'background-image': 'url(assets/images/profile.png)'}"></div>
             </div>
             <h2>Cześć, jestem <span>Kuba</span>. 👋</h2>
         </div>
         <p class="description">{{text}}<span class="cursor" [style.opacity]="isCursorHidden ? 1 : 0.05">|</span></p>
     </div>
-    <div class="background_photo1"></div>
+    <div class="background_photo1" [ngStyle]="{'background-image': 'url(assets/images/background_photo1.png)'}"></div>
 </div>
