@@ -60,7 +60,7 @@
     width: 35%;
     height: calc(100% + 200px);
     background-color: $primary-color;
-    // overflow-y: scroll;
+    overflow-y: scroll;
 
     @media (max-width: 768px) {
         width: 40%;
