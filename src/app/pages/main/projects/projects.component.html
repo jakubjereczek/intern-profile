@@ -2,10 +2,11 @@
     <p class="section-title" id="projects" #projectsSection><span>#projects</span></p>
     <div id="header"></div>
     <div id="section-content">
-        <div class="message-alert" #messageAlert [ngClass]="isMessageAlertVisible ? 'enable' : 'disable'">
-            <p>Najedz na miniaturę projektu aby przejść do szczegółowego okna projektu!</p>
+        <div class="message-alert-container">
+            <div class="message-alert" #messageAlert [ngClass]="isMessageAlertVisible ? 'enable' : 'disable'">
+                <p>Najedz na miniaturę projektu aby przejść do szczegółowego okna projektu!</p>
+            </div>
         </div>
-
         <div class="project-container" *ngFor="let project of projects">
             <div class="project-content" [ngStyle]="{'background-image': 'url(' + project.image + ')'}">
                 <h2 class="project-title">{{project.name}}</h2>

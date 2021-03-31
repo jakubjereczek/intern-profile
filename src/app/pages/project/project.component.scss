@@ -60,7 +60,7 @@
     width: 35%;
     height: calc(100% + 200px);
     background-color: $primary-color;
-    overflow-y: scroll;
+    // overflow-y: scroll;
 
     @media (max-width: 768px) {
         width: 40%;
@@ -136,7 +136,7 @@ button {
 #project-content-container {
     width: 100%;
     height: 100%;
-    overflow-y: hidden;
+    // overflow-y: hidden;
 }
 
 #project-content {
@@ -181,7 +181,7 @@ button {
     right: 84px;
     
 
-    & > .btn{
+    & > .btn {
         position: absolute;
         width: 26px;
         height: 26px;
@@ -194,16 +194,15 @@ button {
         }
     }
 
-    & > div.demo{ 
-        background-image: url("assets/images/link.png");
+    & > .demo { 
+        background-image: url("/assets/images/link.png");
         background-size: contain;
         left: -36px;
 
      }
-    & > div.github{ 
-        background-image: url("assets/images/github2.png");
+    & > .github { 
+        background-image: url("/assets/images/github2.png");
         background-size: contain;
-
     }
 
 
