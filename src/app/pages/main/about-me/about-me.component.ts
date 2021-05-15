@@ -9,9 +9,10 @@ export class AboutMeComponent implements OnInit {
 
   descriptions: string[] = [
     "Miło, że tutaj jesteś:)",
-    "Aplikuje na staż programistyczny!",
-    "Poniżej przedstawie Ci projekty, które wyróżniłem w swoim portfolio"
-
+    "Przygodę z programowaniem webowym rozpocząłem prawie półtorej roku temu.",
+    "Każdą wolną chwile od tego czasu poświęcam na rozwijanie umięjętności, a programowanie sprawia mi niezwykła przyjemność.",
+    "Poniżej przedstawie Ci projekty, które wyróżniłem w swoim portfolio",
+    "Poszukuję pracy jako Frontend Developer bądz JavaScript developer"
   ]
   textIndex: number;
   letterIndex: number;

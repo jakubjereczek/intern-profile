@@ -12,21 +12,28 @@
 #section-content {
     display: flex;
     padding: 20px;
-    @media (max-width: 768px) {
-        flex-direction: column;
+    flex-direction: column;    
+
+    & > .whyme_description, .whyme_technologies {
+        display: flex;    
+        & > div:nth-child(1) {
+            flex-basis: 25%;
+        }
+        & > div:nth-child(2) {
+            flex-basis: 75%;
+        }
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
     }
-    & > div:nth-child(1) {
-        flex-basis: 25%;
-    }
-    & > div:nth-child(2) {
-        flex-basis: 75%;
-    }
+    
+
     z-index: 1;
 
 }
 
 .h2-title {
-    font-size: 3rem;
+    font-size: $font-size-big;
     color: $secondary-color;
     margin: 10px;
     text-align: center;
@@ -40,7 +47,8 @@
 }
 
 .p-describe {
-    font-size: 1.7rem;
+    font-size: $font-size-small;
+    color: $secondary-color;
     margin: 10px;
     text-align: justify;
 }

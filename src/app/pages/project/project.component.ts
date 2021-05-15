@@ -17,6 +17,7 @@ export class ProjectComponent implements OnInit {
 
   projectDetails: Observable<Project>;
   _album = [];
+  loading: boolean = true;
 
   constructor(
     private route: ActivatedRoute,
@@ -32,6 +33,9 @@ export class ProjectComponent implements OnInit {
       switchMap((params: ParamMap) => PROJECTS.filter(project => project.id === Number(params.get('id'))))
     )
     this.initGallery();
+    setTimeout(() => {
+      this.loading = false;
+    }, 0);
   }
 
   initGallery() {
@@ -49,7 +53,6 @@ export class ProjectComponent implements OnInit {
           caption: caption,
           thumb: thumb
         };
-
         this._album.push(album);
       }
     });
@@ -68,18 +71,24 @@ export class ProjectComponent implements OnInit {
 
   back() {
     // this.location.back();
-    this.router.navigate(['main'], { fragment: 'projects' });
+    this.router.navigate(['main']
+      // ,
+      //  { fragment: 'projects' }
+    );
+    // TODO:  Poprawić!
   }
 
   moveToProject(project: Project, type: string) {
+    let url = null;
     switch (type) {
       case 'github':
-        window.location.href = project.github;
+        url = project.github;
         break;
       case 'demo':
-        window.location.href = project.demo;
+        url = project.demo;
         break;
     }
+    window.open(url, "_blank");
   }
 
 }

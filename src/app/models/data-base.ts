@@ -61,24 +61,4 @@ export const PROJECTS: Project[] = [
         demo: null,
         github: 'https://github.com/jakubjereczek/react-jwt-auth'
     },
-    {
-        id: 7,
-        name: "Accouncements",
-        image: 'assets/images/projects/announcements.png',
-        images: [{ link: 'assets/images/screenshots/announcements1.png', caption: "Lista ogloszeń wczytywanych z bazy filtrowane względem miasta" }, { link: 'assets/images/screenshots/announcements2.png', caption: "Prezentacja ogloszenia dodanego przez uzytknika - opcja edycji i usuwania" }, { link: 'assets/images/screenshots/announcements3.png', caption: "Szczegoly ogloszenia" }],
-        description: "Projekt ogłoszeń dzielonych na kategorię i filtrowanych względem miast. Zaimpementowane sa w nim metody CRUD. Tylko zalogowany użytkownik może dodać ogłoszenie, a ten konkretny który utworzyć – usunąć je lub zmodyfikować.",
-        technologies: ["ASP.NET Core", "Entity Framework", "Bootstrap"],
-        demo: null,
-        github: 'https://github.com/jakubjereczek/aspnetcore-announcements'
-    },
-    {
-        id: 8,
-        name: "Intern profile",
-        image: 'assets/images/projects/cv.png',
-        images: [{ link: 'assets/images/screenshots/angular1.png', caption: "Aktualna strona!" },],
-        description: "Strona prezentująca moje projekty na potrzeby rekrutacji na staż programistyczny. Specjalnie dla tego celu nauczyłem się frameworka Angular i zrobiłem w nim pełnoprawna responsywną witrynę. Jesteśli jesteś już tutaj nie potrzebuję więcej jej opisywać.",
-        technologies: ["Angular", "SSCS"],
-        demo: 'https://jakubjereczek.github.io/intern-profile/',
-        github: 'https://github.com/jakubjereczek/intern-profile'
-    },
 ]

@@ -1,7 +1,8 @@
 @import "../../../shared/mixins.scss";
+@import "../../../shared/variables.scss";
 
 #single-section-page {
-    height: calc(100vh - 150px);
+    height: calc(100vh + 55px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,8 +12,8 @@
         display: flex;
         flex-wrap: nowrap;
         flex-direction: column;
-        width: 50%;
-        min-height: 50%;
+        width: 60%;
+        min-height: 60%;
         margin: 10px;
         text-align: center;
         z-index: 1;
@@ -26,19 +27,38 @@
 }
 
 h2 {
-    font-size: 3rem;
-    font-weight: normal;
+    font-size: $font-size-big;
+    font-weight: 400;
     & > span {
         font-weight: 500;
     }
+
+    @media (min-width: 1025px) {
+        font-size: 1.25 * $font-size-big;
+    }
+}
+
+h3 {
+    font-size: $font-size-small;
+    font-weight: 100;
+    color: $secondary-color;
+}
+p.section-title {
+    color: $secondary-color;
+    padding-top: 55px;
 }
 
 p {
-    color: #fff;
+    color: $secondary-color;
 }
 
 .description {
-    font-size: 1.6rem;
+    font-size: $font-size-medium;
+    font-weight: 100;
+   
+    @media (min-width: 1025px) {
+        font-size: 1.25*$font-size-medium;
+    }
 }
 
 .image-profile-container {
@@ -46,8 +66,15 @@ p {
     box-sizing: border-box;
     width: 126px;
     height: 126px;
+
+
+    @media (min-width: 1025px) {
+        width: 186px;
+        height: 186px;
+    }
+
     border-radius: 50%;
-    background-color: #fff;
+    background-color: $secondary-color;
     padding: 5px;
 
     & > .image-profile {
@@ -62,7 +89,7 @@ p {
 
 .background_photo1 {
     position: absolute;
-    left: 45%;
+    left: 50%;
     top: calc(50% - 150px);
     max-width: 400px;
     max-height: 400px;

@@ -18,8 +18,19 @@ export class MenuComponent implements OnInit {
     this.isMenuOpen = !this.isMenuOpen;
   }
 
-  scrollIntoView(elem: string) {
-    document.querySelector(elem)!.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  scrollIntoView(id: string) {
+    this.toggleMenu();
+
+    const element = document.querySelector(id);
+    const headerOffset = 55;
+    const elementPosition = element.getBoundingClientRect().top;
+    const offsetPosition = elementPosition - headerOffset;
+
+    console.log(offsetPosition)
+    window.scrollTo({
+      top: window.scrollY + offsetPosition,
+      behavior: "smooth"
+    });
   }
 
 }

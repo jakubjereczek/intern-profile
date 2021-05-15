@@ -1,6 +1,14 @@
-$primary-color: #996AD4;
-$secondary-color: #ffffff;
-$text-color: #000;
-$text-secondary-color: #444;
-$font-size: 16px;
+$primary-color: #996AD4; //#996AD4;
+$secondary-color: #fff; // fff
+
+$font-size-big: 3rem;
+$font-size-medium: 2rem;
+$font-size-small: 1.25rem;
+
+@media (min-width: 1025px) {
+    $font-size-big: 2.4rem;
+    $font-size-medium: 1.8rem;
+    $font-size-small: 1rem;
+}
+
 

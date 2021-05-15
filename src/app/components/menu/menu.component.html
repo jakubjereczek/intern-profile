@@ -1,24 +1,15 @@
-<div id="header">
-    <div class="inside">
-        <span class="title">Jakub Jereczek page</span>
-        <ul class="desktop-menu">
-            <li>
-                <span class="link activate">Jakub Jereczek</span>
-            </li>
-            <li><span class="link" (click)="scrollIntoView('#aboutme')">O mnie</span></li>
-            <li><span class="link" (click)="scrollIntoView('#projects')">Projekty</span></li>
-            <li><span class="link" (click)="scrollIntoView('#whyme')">Dlaczego ja?</span></li>
-        </ul>
-        <div class="hamburger" [ngClass]="isMenuOpen ? 'open' : ''" (click)="toggleMenu()">
-            <div class="hamburger__line"></div>
-        </div>
+<div id="menu_bar" [ngClass]="{'open' : isMenuOpen}">
+    <div class="hamburger" [ngClass]="{'open' : isMenuOpen}" (click)="toggleMenu()">
+        <div class="hamburger__line"></div>
     </div>
 </div>
 
-<div class="mobile-menu-box" [ngClass]="isMenuOpen ? 'open' : ''">
-    <ul class="mobile-menu">
-        <li><span class="link" (click)="scrollIntoView('#aboutme')">O mnie</span></li>
-        <li><span class="link" (click)="scrollIntoView('#projects')">Projekty</span></li>
-        <li><span class="link" (click)="scrollIntoView('#whyme')">Dlaczego ja?</span></li>
-    </ul>
+<div class="menu_wrapper" [ngClass]="{'active' : isMenuOpen}">
+    <div class="menu_content">
+        <ul>
+            <li (click)="scrollIntoView('#aboutme')">O mnie</li>
+            <li (click)="scrollIntoView('#projects')">Projekty</li>
+            <li (click)="scrollIntoView('#whyme')">Dlaczego ja?</li>
+        </ul>
+    </div>
 </div>

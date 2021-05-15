@@ -7,9 +7,14 @@
 }
 
 html {
-    font-size: 16px;
     @media (max-width: 768px) {
         font-size: 14px;
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+        font-size: 16px;
+    }
+    @media (min-width: 1025px) {
+        font-size: 18px;
     }
     overflow-x: hidden;
 }
@@ -20,7 +25,7 @@ body {
 
 #header {
     position: relative;
-    top: -50px;
+    top: -100px;
     left: -5%;
     display: flex;
     justify-content: center;
@@ -57,7 +62,9 @@ body {
     z-index: 3;
 
     & > span {
-        color: $primary-color;
+        color: black;
     }
 }
+
+
 

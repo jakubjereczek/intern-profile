@@ -11,12 +11,18 @@
     & > #section-content {
         box-sizing: border-box;
         position: relative;
+        transition: 1.2s;
+        top: -100vh;
+        &.open {
+            top: 0;
+        }
+
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: $secondary-color;
-        width: 70%;
-        height: 75%;
+        width: 80%;
+        height: 90%;
         border-radius: 20px;
         padding: 20px;
 
@@ -55,12 +61,18 @@
 
 #project-images {
     position: absolute;
-    top: -200px;
+    // top: -200px;
     left: 20px;
     width: 35%;
     height: calc(100% + 200px);
     background-color: $primary-color;
     overflow-y: scroll;
+
+    transition: 1.2s 1.2s;
+    top: -200vh;
+    &.open {
+        top: -200px;
+    }
 
     @media (max-width: 768px) {
         width: 40%;
@@ -77,6 +89,12 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
+        transition: 1.2s 2.4s;
+
+        transform: scale(0);
+        &.open {
+            transform: scale(1);
+        }
 
         & > img {
             box-sizing: border-box;
@@ -144,6 +162,12 @@ button {
 
     height: 100%;
 
+    transform: scale(0);
+    transition: 1.2s 2.4s;
+    &.open {
+        transform: scale(1);
+    }
+
     margin-left: calc(35% + 30px);
     @media (max-width: 768px) {
         margin-left: calc(45% + 15px);
@@ -154,10 +178,10 @@ button {
     }
 
     & > .project-content-title {
-        font-size: 2.4rem;
+        font-size: $font-size-medium;
     }
     & > .project-content-description, & > .project-content-technologies {
-        font-size: 1.2rem;
+        font-size: $font-size-small;
     }
 
 }

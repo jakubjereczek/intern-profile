@@ -1,5 +1,5 @@
 <div id="single-section-page">
-    <div id="section-content">
+    <div id="section-content" [ngClass]="{'open' : !loading}">
         <div id="project-container-bg">
             <div id="project-container" *ngIf="projectDetails | async as project">
                 <button (click)="back()"></button>
@@ -13,13 +13,13 @@
                             (click)="moveToProject(project, 'demo')"></div>
                     </ng-container>
                 </div>
-                <div id="project-images">
-                    <div class="project-images-content">
+                <div id="project-images" [ngClass]="{'open' : !loading}">
+                    <div class="project-images-content" [ngClass]="{'open' : !loading}">
                         <img *ngFor="let image of _album; let i=index" [src]="image.thumb" (click)="open(i)" />
                     </div>
                 </div>
                 <div id="project-content-container">
-                    <div id="project-content">
+                    <div id="project-content" [ngClass]="{'open' : !loading}">
                         <h2 class="project-content-title">{{project.name}}</h2>
                         <p class="project-content-technologies">Zastosowane technologie:
                             <span>{{project.technologies.join(", ")}}</span></p>
