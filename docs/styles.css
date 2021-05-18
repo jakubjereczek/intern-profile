@@ -31,9 +31,10 @@ body {
 }
 
 #header {
-  position: relative;
+  width: 100%;
+  position: absolute;
   top: -100px;
-  left: -5%;
+  left: -1px;
   display: flex;
   justify-content: center;
   background-color: #fff;

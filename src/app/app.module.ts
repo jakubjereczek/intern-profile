@@ -15,6 +15,7 @@ import localePl from "@angular/common/locales/pl";
 import { registerLocaleData } from '@angular/common';
 
 import { LightboxModule } from 'ngx-lightbox';
+import { ContactComponent } from './pages/main/contact/contact.component';
 
 
 registerLocaleData(localePl);
@@ -27,7 +28,8 @@ registerLocaleData(localePl);
     AboutMeComponent,
     ProjectsComponent,
     WhyMeComponent,
-    ProjectComponent
+    ProjectComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

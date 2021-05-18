@@ -48,9 +48,14 @@ export class ProjectsComponent implements OnInit {
     const scrollWidth = window.pageYOffset
     const projectSectionWidth = this.projectsSection.nativeElement.offsetTop
 
+    console.log(scrollWidth, projectSectionWidth)
     if (scrollWidth > projectSectionWidth - 250) {
+      // console.log("yes")
+
       return this.isMessageAlertVisible = true;
     }
+    console.log("mot")
+
     return this.isMessageAlertVisible = false;
   }
 

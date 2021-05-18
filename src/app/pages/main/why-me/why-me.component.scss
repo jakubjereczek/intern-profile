@@ -4,23 +4,28 @@
     position: relative;
     height: auto;
     min-height: 100vh;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
     align-items: center;
+    background-color: $primary-color;
 }
 
 #section-content {
     display: flex;
-    padding: 20px;
-    flex-direction: column;    
+    flex-wrap: wrap;
+    // padding: 20px;
+    flex-direction: column;  
+    justify-content: center; 
 
     & > .whyme_description, .whyme_technologies {
         display: flex;    
         & > div:nth-child(1) {
-            flex-basis: 25%;
+            flex-basis: 30%;
         }
         & > div:nth-child(2) {
-            flex-basis: 75%;
+            flex-basis: 70%;
         }
         @media (max-width: 768px) {
             flex-direction: column;
@@ -34,7 +39,7 @@
 
 .h2-title {
     font-size: $font-size-big;
-    color: $secondary-color;
+    color: #fff;
     margin: 10px;
     text-align: center;
     font-weight: 300;
@@ -48,9 +53,10 @@
 
 .p-describe {
     font-size: $font-size-small;
-    color: $secondary-color;
-    margin: 10px;
-    text-align: justify;
+    color: #fff;
+    // margin: 10px;
+    padding: 10px;
+    // text-align: justify;
 }
 
 
@@ -73,4 +79,45 @@
         top: 0%;
     }
 
+}
+
+.section-title {
+    color: black;
+}
+
+h2 {
+    font-size: $font-size-big;
+    color: $secondary-color;
+    font-weight: 400;
+    padding: 0 10px;
+
+}
+
+h3 {
+    font-size: $font-size-medium;
+    color: $secondary-color;
+    font-weight: 400;
+    padding: 0 10px;
+
+}
+
+.technology-icon {
+    display: inline-block;
+    position: relative;
+
+    width: 90px;
+    height: 90px;
+    background-color: #6A737D;
+    font-size: $font-size-small;
+    margin: 10px;
+
+    & > p {
+        position: absolute;
+        left: -10px;
+        bottom: 10px;
+    }
+}
+
+.text-center {
+    text-align: center;
 }

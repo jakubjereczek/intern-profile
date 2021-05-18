@@ -1,39 +1,36 @@
 <p class="section-title" id="whyme">#whyme</p>
 <div id="single-section-page">
     <div id="section-content">
-
-        <div class="whyme_description">
-            <div>
-                <h2 class="h2-title">Dlaczego <span>warto</span> na mnie postawić?</h2>
-            </div>
-            <div>
-                <p class="p-describe">Większość swojego wolnego czasu w trakcie studiów poswięcam na szlifowanie
-                    umiejetności oraz samorozwój w obszarze programowania (głównie aplikacji webowych). Jestem osobą
-                    zoorganizowana, odpowiedzialną oraz pracownitą. Praca z nowymi technologami motywuję mnie, a nie
-                    odstrasza. Moim głównym atutem jest dobra znajomość JavaScript (React.js, Angular, Node.js,
-                    Express.js).
-                    Rozwijam się w kontekście programowania
-                    aplikacji internetowych (front oraz backend). Staż umożliwi mi zdobycie komercyjnego doświadczenia w
-                    dziedzinie programowania. Projekty, które zaprezentowałem wyżej są napisane w różnych technologiach
-                    co
-                    pokazuje moją zdolność do uczenia się nowych rzeczy. Myśle, że byłbym wartościowym pracownikiem, a w
-                    przypadku dostania się współpraca nie skończyła by się na stażu a na pełnoprawnej pracy po jego
-                    ukończeniu.
-                </p>
-            </div>
+        <div class="section">
+            <h2 class="h2-title">Dlaczego <span>warto</span> na mnie postawić?</h2>
+            <h2>Cześć<span>.</span></h2>
+            <h3>Tutaj chciałbym przedstawić swoją sylwetkę szczegółowo.</h3>
+            <p class="p-describe">
+                Zaczynajac od początku. Jestem studentem drugiego roku Informatyki i Ekonometrii.
+                Większość swojego wolnego czasu w trakcie studiów poswięcam na szlifowanie
+                umiejetności oraz samorozwój w obszarze programowania (głównie aplikacji webowych). Jestem osobą
+                zoorganizowana, odpowiedzialną oraz pracownitą. Praca z nowymi technologami motywuję mnie, a nie
+                odstrasza. Moim głównym atutem jest dobra znajomość JavaScript (React.js, Angular, Node.js,
+                Express.js).
+                Rozwijam się w kontekście programowania
+                aplikacji internetowych (front oraz backend). Staż umożliwi mi zdobycie komercyjnego doświadczenia w
+                dziedzinie programowania. Projekty, które zaprezentowałem wyżej są napisane w różnych technologiach
+                co
+                pokazuje moją zdolność do uczenia się nowych rzeczy. Myśle, że byłbym wartościowym pracownikiem, a w
+                przypadku dostania się współpraca nie skończyła by się na stażu a na pełnoprawnej pracy po jego
+                ukończeniu.
+            </p>
         </div>
-        <div class="whyme_technologies">
-            <div>
-                <h2 class="h2-title">Technologie/Języki programowania w ktorych pracuję</h2>
-            </div>
-            <div>
-                <p class="p-describe">
-                    HTML, CSS, JavaScript, TypeScript, React, Angular, Node.js, MongoDB
-                </p>
-            </div>
-
+        <div class="section">
+            <h2 class="h2-title">Technologie / Języki programowania w ktorych pracuję</h2>
+            <p class="p-describe text-center">
+                <span class="technology-icon" *ngFor="let technology of technologies">
+                    <p>
+                        {{technology.name}}
+                    </p>
+                </span>
+            </p>
         </div>
-
     </div>
     <div class="background_photo2" [ngStyle]="{'background-image': 'url(assets/images/background_photo2.png)'}"></div>
 </div>
